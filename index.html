@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshiya Gupta - Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 4rem 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            color: #888;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .internships-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .internship {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .internship::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .internship:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .duration {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .role-description {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .impact-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .impact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .impact-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .impact-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .impact-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .impact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .impact-item {
+            color: #ccc;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .impact-item::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .resume-section {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .resume-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .social-section {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-link:hover::before {
+            opacity: 1;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .name {
+                font-size: 2.2rem;
+            }
+
+            .internships-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animated-bg"></div>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="profile-img">AG</div>
+                <h1 class="name">Arshiya Gupta</h1>
+                <p class="title">Software Engineer | B.S. Computer Science @ UIUC</p>
+                <p class="description">
+                    Passionate about building scalable, high-performance systems and distributed architectures.
+                    Experienced in backend development, microservices, and cloud computing.
+                    I love solving complex problems in distributed systems, database optimization, and system reliability.
+                </p>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="internships-grid">
+                <div class="internship">
+                    <div class="company-name">Axon</div>
+                    <div class="role-title">Software Engineering Intern</div>
+                    <div class="duration">May 2025 - August 2025</div>
+                    <div class="role-description">
+                        Improved system modularity and independent service scaling by replacing database writes with HTTP API calls.
+                        Built configurable Gatling test tool and deployed Scala-based load testing platform on Azure for ingestion
+                        workflow handling 70PB/month. Enabled real-time monitoring using Grafana dashboards.
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('axon')">View Impact</button>
+                </div>
+
+                <div class="internship">
+                    <div class="company-name">PayPal Inc.</div>
+                    <div class="role-title">Lead Software Engineering Intern</div>
+                    <div class="duration">May 2024 - August 2024</div>
+                    <div class="role-description">
+                        Enhanced system reliability by implementing error handling modules across 3+ services.
+                        Secured CI/CD pipelines by enforcing TLS and masking credentials. Boosted Order API performance
+                        supporting 3M+ daily transactions via code refactoring and query optimization.
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('paypal')">View Impact</button>
+                </div>
+
+                <div class="internship">
+                    <div class="company-name">HackIllinois</div>
+                    <div class="role-title">API Team</div>
+                    <div class="duration">Sept 2024 - Present</div>
+                    <div class="role-description">
+                        Scaled API capacity to support 5k+ hourly requests by designing RESTful backend architecture
+                        with 30+ endpoints. Implemented multi-factor JWT authentication with key rotation and encryption.
+                        Developed microservice API with WebSocket and end-to-end testing.
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('hackillinois')">View Impact</button>
+                </div>
+
+                <div class="internship">
+                    <div class="company-name">University of Illinois at Urbana-Champaign</div>
+                    <div class="role-title">Undergraduate Teaching Assistant</div>
+                    <div class="duration">January 2024 - Present</div>
+                    <div class="role-description">
+                        Designed MIPS-based SpimBot challenge demonstrating CPU architecture concepts for 500+ students.
+                        Reduced grading time by 75% across 10k+ daily submissions by scripting automated workflows.
+                        Implemented buffer overflow protection and secure memory addressing within low-level system architecture.
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('uiuc')">View Impact</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <div class="project-image">✈️</div>
+                    <h3 class="project-title">SkyTrack: Airplane Tracking System</h3>
+                    <p class="project-description">
+                        Reduced flight lookup latency by 70% by designing normalized schema with multi-attribute indexing.
+                        Maintained data integrity across 6+ tables and reduced notification latency to 1.5 seconds with
+                        optimized trigger-based alerts.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Database Design</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Indexing</span>
+                        <span class="tech-tag">Triggers</span>
+                        <span class="tech-tag">Normalization</span>
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('skytrack')">View Impact</button>
+                </div>
+
+                <div class="project">
+                    <div class="project-image">🔔</div>
+                    <h3 class="project-title">Notionize: Weekly Automation Tool</h3>
+                    <p class="project-description">
+                        Reduced weekly planning time by 70% by building a Discord-based task sync bot with smart multi-source
+                        parsing. Synced 1k+ daily events between Google Calendar and Notion with 99% uptime using Flask and Notion API.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Discord API</span>
+                        <span class="tech-tag">Notion API</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('notionize')">View Impact</button>
+                </div>
+
+                <div class="project">
+                    <div class="project-image">🔐</div>
+                    <h3 class="project-title">Password Manager</h3>
+                    <p class="project-description">
+                        Achieved 100% data confidentiality by implementing zero-knowledge encryption eliminating plaintext exposure.
+                        Increased vault resilience by 80% through secure sharding across multiple encrypted files.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Encryption</span>
+                        <span class="tech-tag">Zero-knowledge</span>
+                        <span class="tech-tag">File Sharding</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Cryptography</span>
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('password')">View Impact</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="resume-section">
+            <h2 class="section-title">Resume</h2>
+            <a href="#" class="resume-btn">Download Resume</a>
+        </div>
+
+        <div class="social-section">
+            <div class="social-links">
+                <a href="mailto:arshiya.gupta@example.com" class="social-link" title="Email">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                    </svg>
+                </a>
+
+                <a href="https://linkedin.com/in/arshiyagupta" class="social-link" title="LinkedIn">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+
+                <a href="https://github.com/arshiyag11" class="social-link" title="GitHub">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impact Modals -->
+    <div id="impact-modal" class="impact-modal">
+        <div class="impact-content">
+            <button class="close-btn" onclick="closeImpact()">&times;</button>
+            <div id="impact-data"></div>
+        </div>
+    </div>
+
+    <script>
+        const impactData = {
+            // Internship impacts
+            axon: {
+                title: "Axon - Software Engineering Intern Impact",
+                items: [
+                    "Improved system modularity and independent service scaling by 100%",
+                    "Reduced test setup time by 40% with configurable Gatling test tool",
+                    "Prevented 5+ production outages with real-time monitoring",
+                    "Increased test coverage by 50% for 70PB/month ingestion workflow",
+                    "Deployed Scala-based load testing platform on Azure"
+                ]
+            },
+            paypal: {
+                title: "PayPal Inc. - Lead Software Engineering Intern Impact",
+                items: [
+                    "Enhanced system reliability reducing production incidents across 3+ services",
+                    "Secured 5+ CI/CD pipelines cutting token exposure risk by 95%",
+                    "Reduced auth-errors by 33% with token-based systems",
+                    "Boosted Order API performance by 35% supporting 3M+ daily transactions",
+                    "Implemented TLS enforcement and credential masking in logs"
+                ]
+            },
+            hackillinois: {
+                title: "HackIllinois - API Team Impact",
+                items: [
+                    "Scaled API capacity to support 5k+ hourly requests",
+                    "Designed RESTful backend architecture with 30+ endpoints",
+                    "Secured API access for 5k+ users with multi-factor JWT authentication",
+                    "Reduced unauthorized access attempts by 90%",
+                    "Increased event check-in reliability by 30% with microservice API"
+                ]
+            },
+            uiuc: {
+                title: "UIUC - Teaching Assistant Impact",
+                items: [
+                    "Designed MIPS-based SpimBot challenge for 500+ students",
+                    "Reduced grading time by 75% across 10k+ daily submissions",
+                    "Implemented buffer overflow protection in system architecture",
+                    "Scripted automated workflows in Python and Bash",
+                    "Demonstrated CPU architecture concepts to large student cohorts"
+                ]
+            },
+            // Project impacts
+            skytrack: {
+                title: "SkyTrack: Airplane Tracking System Impact",
+                items: [
+                    "Reduced flight lookup latency by 70% with normalized schema",
+                    "Multi-attribute indexing on flight schedules and aircraft metadata",
+                    "Maintained data integrity across 6+ tables with foreign key constraints",
+                    "Custom triggers and cascading updates for data consistency",
+                    "Reduced notification latency to 1.5 seconds with optimized triggers"
+                ]
+            },
+            notionize: {
+                title: "Notionize: Weekly Automation Tool Impact",
+                items: [
+                    "Reduced weekly planning time by 70% with Discord-based task sync bot",
+                    "Synced 1k+ daily events between Google Calendar and Notion",
+                    "Achieved 99% uptime using Flask and Notion API",
+                    "Optimized API efficiency reducing calls by 80%",
+                    "Slashed response time from 2s to 300ms with SQLite caching"
+                ]
+            },
+            password: {
+                title: "Password Manager Impact",
+                items: [
+                    "Achieved 100% data confidentiality with zero-knowledge encryption",
+                    "Eliminated plaintext exposure throughout the system",
+                    "Increased vault resilience by 80% with secure sharding",
+                    "Protected against corruption and targeted file attacks",
+                    "Reduced brute-force success by 75% with progressive time-locked delays"
+                ]
+            }
+        };
+
+        function showImpact(project) {
+            const modal = document.getElementById('impact-modal');
+            const dataDiv = document.getElementById('impact-data');
+            const data = impactData[project];
+
+            dataDiv.innerHTML = `
+                <h3 class="impact-title">${data.title}</h3>
+                <ul class="impact-list">
+                    ${data.items.map(item => `<li class="impact-item">${item}</li>`).join('')}
+                </ul>
+            `;
+
+            modal.style.display = 'flex';
+        }
+
+        function closeImpact() {
+            document.getElementById('impact-modal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('impact-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeImpact();
+            }
+        });
+    </script>
+</body>
+
+</html>
