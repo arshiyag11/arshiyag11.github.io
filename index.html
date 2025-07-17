@@ -657,12 +657,15 @@
                     <div class="company-name">Axon</div>
                     <div class="role-title">Software Engineering Intern</div>
                     <div class="duration">May 2025 - August 2025</div>
-                    <div class="role-description">
+                    <!-- <div class="role-description">
                         Developed a load testing tool from scratch  that helped identify bottlenecks for a workflow comprising 
                         5 ingestion APIs, using CLI based parameter tuning.  Improved system modularity and independent service scaling 
                         by replacing database writes with HTTP API calls.
                         Built configurable Gatling test tool and deployed Scala-based load testing platform on Azure for ingestion
                         workflow handling 70PB/month. Enabled real-time monitoring using Grafana dashboards.
+                    </div> -->
+                    <div class="role-description">
+                        As part of the Data Ingestion team, I engineered a full-fledged load testing framework in Scala to evaluate performance across 5 HTTP APIs. This included designing CLI-based tuning for configurable load profiles, deploying on Azure, and setting up Prometheus + Grafana for observability. My work improved modularity, test coverage, and allowed real-time throughput insights across a pipeline handling over 70PB/month.
                     </div>
                     <div class="project-tech">
                         <span class="tech-tag">Scala</span>
@@ -680,10 +683,13 @@
                     <div class="company-name">PayPal Inc.</div>
                     <div class="role-title">Lead Software Engineering Intern</div>
                     <div class="duration">May 2024 - August 2024</div>
-                    <div class="role-description">
+                    <!-- <div class="role-description">
                         Enhanced system reliability by implementing error handling modules across 3+ services.
                         Secured CI/CD pipelines by enforcing TLS and masking credentials. Boosted Order API performance
                         supporting 3M+ daily transactions via code refactoring and query optimization.
+                    </div> -->
+                    <div class="role-description">
+                        Worked on PayPal's Order API team responsible for supporting millions of daily transactions. I led improvements in service reliability and deployment pipeline security by implementing error-handling modules, TLS enforcement, and secret masking. Additionally, I optimized transactional queries and modularized code to boost throughput and reduce failure rates in production.
                     </div>
                     <div class="project-tech">
                         <span class="tech-tag">Java</span>
@@ -696,19 +702,33 @@
                     <button class="impact-btn" onclick="showImpact('paypal')">View Impact</button>
                 </div>
 
-                <div class="internship">
+                <!-- <div class="internship">
                     <div class="company-name">HackIllinois</div>
                     <div class="role-title">API Team</div>
                     <div class="duration">Sept 2024 - Present</div>
                     <div class="role-description">
-                        Scaled API capacity to support 5k+ hourly requests by designing RESTful backend architecture
-                        with 30+ endpoints. Implemented multi-factor JWT authentication with key rotation and encryption.
-                        Developed microservice API with WebSocket and end-to-end testing.
+                        Developed the backend for HackIllinois’s public API layer. Architected and scaled RESTful APIs to handle over 5,000 requests/hour across 30+ endpoints. Ensured secure user authentication using multi-factor JWT-based systems, and handled socket-based communication for real-time check-ins during events.
                     </div>
                     <div class="project-tech">
                         <span class="tech-tag">RESTful</span>
                     </div>
                     <button class="impact-btn" onclick="showImpact('hackillinois')">View Impact</button>
+                </div> -->
+
+                <div class="internship">
+                    <div class="company-name">CS STARS</div>
+                    <div class="role-title">Student Researcher</div>
+                    <div class="duration">January 2023 - Present</div>
+                    <div class="role-description">
+                        Working within the CS STARS research initiative, I explored few-shot and zero-shot learning techniques to reduce dependency on historical training data. I also developed a Rust-based hyperparameter optimization engine leveraging Bayesian techniques to improve predictive model accuracy while minimizing computational cost.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Bayesian Optimization</span>
+                        <span class="tech-tag">Zero-Shot Learning</span>
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('csstars')">View Impact</button>
                 </div>
 
                 <div class="internship">
@@ -716,10 +736,7 @@
                     <div class="role-title">Undergraduate Teaching Assistant</div>
                     <div class="duration">January 2024 - Present</div>
                     <div class="role-description">
-                        TAed for over 4 courses which include Computer Architecture, Data Structures, Software Design Lab, Databases in a span of 2 years. 
-                        <!-- Designed MIPS-based SpimBot challenge demonstrating CPU architecture concepts for 500+ students.
-                        Reduced grading time by 75% across 10k+ daily submissions by scripting automated workflows.
-                        Implemented buffer overflow protection and secure memory addressing within low-level system architecture. -->
+                        Served as a TA for core CS courses including Computer Architecture, Data Structures, and Databases. Led lab sections, helped debug C/C++ and MIPS code for over 500 students, and designed assignments like a MIPS-based SpimBot. Automated large-scale grading pipelines using Bash and Python to cut turnaround time.
                     </div>
                     <div class="project-tech">
                         <span class="tech-tag">MIPS</span>
@@ -735,13 +752,13 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project">
-                    <!-- <div class="project-image">✈️</div> -->
                     <h3 class="project-title">SkyTrack: Airplane Tracking System</h3>
                     <p class="project-description">
-                        <!-- Developed an airplane tracking system that analyzed over 6 million data points  -->
-                        Reduced flight lookup latency by 70% by designing normalized schema with multi-attribute indexing.
+                        <!-- Reduced flight lookup latency by 70% by designing normalized schema with multi-attribute indexing.
                         Maintained data integrity across 6+ tables and reduced notification latency to 1.5 seconds with
-                        optimized trigger-based alerts.
+                        optimized trigger-based alerts. -->
+                        Built a fully normalized SQL schema for real-time airplane tracking with foreign key constraints, cascading triggers, and multi-attribute indexing. 
+                        SkyTrack monitors flights, schedules, and passenger metadata while delivering live alerts through an optimized trigger system, with sub-2s notification latency.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">SQL</span>
@@ -749,8 +766,6 @@
                         <span class="tech-tag">Javascript</span>
                         <span class="tech-tag">Google Cloud Platform (GCP)</span>
                         <span class="tech-tag">Database Design</span>
-                        <!-- <span class="tech-tag">Indexing</span>       
-                        <span class="tech-tag">Normalization</span> -->
                     </div>
                     <button class="impact-btn" onclick="showImpact('skytrack')">View Impact</button>
                 </div>
@@ -759,8 +774,10 @@
                     <!-- <div class="project-image">🔔</div> -->
                     <h3 class="project-title">Notionize: Weekly Automation Tool</h3>
                     <p class="project-description">
-                        Reduced weekly planning time by 70% by building a Discord-based task sync bot with smart multi-source
-                        parsing. Synced 1k+ daily events between Google Calendar and Notion with 99% uptime using Flask and Notion API.
+                        <!-- Reduced weekly planning time by 70% by building a Discord-based task sync bot with smart multi-source
+                        parsing. Synced 1k+ daily events between Google Calendar and Notion with 99% uptime using Flask and Notion API. -->
+                        Designed a Discord-integrated task sync bot that automates weekly planning by parsing and syncing events from Google Calendar into Notion using their respective APIs. 
+                        Leveraged Flask and SQLite caching for fast, fault-tolerant updates across 1k+ daily events with minimal API overhead.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
@@ -772,8 +789,7 @@
                     <button class="impact-btn" onclick="showImpact('notionize')">View Impact</button>
                 </div>
 
-                <div class="project">
-                    <!-- <div class="project-image">🔐</div> -->
+                <!-- <div class="project">
                     <h3 class="project-title">Password Manager</h3>
                     <p class="project-description">
                         Achieved 100% data confidentiality by implementing zero-knowledge encryption eliminating plaintext exposure.
@@ -781,12 +797,26 @@
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Rust</span>
-                        <!-- <span class="tech-tag">Encryption</span>
-                        <span class="tech-tag">Zero-knowledge</span>
-                        <span class="tech-tag">Security</span>
-                        <span class="tech-tag">Cryptography</span> -->
                     </div>
                     <button class="impact-btn" onclick="showImpact('password')">View Impact</button>
+                </div> -->
+                <div class="project">
+                    <h3 class="project-title">Discoverify</h3>
+                    <p class="project-description">
+                        <!-- <p class="project-description">
+                            Discoverify is a personalized music recommendation engine that curates smooth playlists by analyzing tempo, key, and genre compatibility. Built to handle large music libraries efficiently, it leverages collaborative filtering and fast in-memory caching for near-instant track suggestions.
+                        </p> -->
+                        <p class="project-description">
+                            A smart music exploration tool that recommends tracks using audio features like tempo, key, and genre. Discoverify combines collaborative filtering with MySQL-backed metadata indexing and Redis caching to deliver personalized playlists at sub-second speed for libraries of 1,000+ tracks.
+                        </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Spotify API</span>
+                    </div>
+                    <button class="impact-btn" onclick="showImpact('discoverify')">View Impact</button>
                 </div>
             </div>
         </section>
@@ -800,10 +830,6 @@
                         Experience across infrastructure, backend, and systems engineering — with a focus on performance, scale, and reliability.
                     </p>                    
                     <div class="resume-stats">
-                        <!-- <div class="stat-item">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div> -->
                         <div class="stat-item">
                             <span class="stat-number">7+</span>
                             <span class="stat-label">Projects</span>
@@ -815,13 +841,13 @@
                     </div>
                 </div>
                 <div class="resume-actions">
-                    <a href="ArshiyaGuptaResume.pdf" download class="resume-btn">
+                    <a href="ArshiyaGuptaResume copy.pdf" download class="resume-btn">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
                         </svg>
                         Download Resume
                     </a>
-                    <a href="ArshiyaGuptaResume.pdf" class="resume-btn secondary">
+                    <a href="ArshiyaGuptaResume copy.pdf" class="resume-btn secondary">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
                         </svg>
@@ -871,16 +897,6 @@
                         <div class="social-label">GitHub</div>
                         <div class="social-username">arshiyag11</div>
                     </a>
-    
-                    <!-- <a href="https://twitter.com/arshiyagupta" class="social-link">
-                        <div class="social-icon-wrapper">
-                            <svg class="social-icon" viewBox="0 0 24 24">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </div>
-                        <div class="social-label">Twitter</div>
-                        <div class="social-username">@arshiyagupta</div>
-                    </a> -->
                 </div>
     
                 <div class="contact-info">
@@ -928,6 +944,16 @@
                     "Deployed Scala-based load testing platform on Azure"
                 ]
             },
+            csstars: {
+                title: "CS STARS - Student Researcher Impact",
+                items: [
+                    "Developed Rust-based hyperparameter optimization engine",
+                    "Improved predictive model accuracy by 30% with Bayesian techniques",
+                    "Reduced computational cost by 50% in model training",
+                    "Explored few-shot and zero-shot learning techniques",
+                    "Contributed to research on reducing historical data dependency"
+                ]
+            },
             paypal: {
                 title: "PayPal Inc. - Lead Software Engineering Intern Impact",
                 items: [
@@ -955,7 +981,7 @@
                     "Reduced grading time by 75% across 10k+ daily submissions",
                     "Implemented buffer overflow protection in system architecture",
                     "Scripted automated workflows in Python and Bash",
-                    "Demonstrated CPU architecture concepts to large student cohorts"
+                    "helped a cohot of 500+ students debug their code in C/C++ and MIPS"
                 ]
             },
             // Project impacts
@@ -979,14 +1005,13 @@
                     "Slashed response time from 2s to 300ms with SQLite caching"
                 ]
             },
-            password: {
-                title: "Password Manager Impact",
+            discoverify: {
+                title: "Discoverify Impact",
                 items: [
-                    "Achieved 100% data confidentiality with zero-knowledge encryption",
-                    "Eliminated plaintext exposure throughout the system",
-                    "Increased vault resilience by 80% with secure sharding",
-                    "Protected against corruption and targeted file attacks",
-                    "Reduced brute-force success by 75% with progressive time-locked delays"
+                    "Reduced recommendation latency by 55% by implementing Redis caching",
+                    "Improved playlist generation speed from 2s to 900ms through optimized MySQL indexing",
+                    "Enhanced recommendation quality by 35% using collaborative filtering based on tempo, key, and genre similarity",
+                    "Achieved 85% user satisfaction rate through intelligent, personalized music exploration experiences",
                 ]
             }
         };
