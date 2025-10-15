@@ -1,0 +1,605 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIUC Student Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #13294b 0%, #1a3a5c 100%);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 72px;
+            font-weight: 700;
+            letter-spacing: 8px;
+        }
+
+        .header .accent {
+            color: #ff5f05;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .name {
+            color: #13294b;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            color: #ff5f05;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .university {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .graduation {
+            color: #7a7a7a;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            margin-bottom: 50px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .contact-item i {
+            color: #ff5f05;
+            font-size: 24px;
+            width: 40px;
+            margin-right: 15px;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #ff5f05;
+        }
+
+        .divider {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 40px 0;
+        }
+
+        .section-title {
+            color: #13294b;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .tag {
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .tag.orange {
+            background: #ffe5d9;
+            color: #ff5f05;
+        }
+
+        .tag.blue {
+            background: #d9e8ff;
+            color: #0066cc;
+        }
+
+        .qr-section {
+            background: linear-gradient(135deg, #fff7f0 0%, #ffe8d9 100%);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .qr-box {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #000;
+            margin: 0 auto;
+        }
+
+        .qr-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .qr-subtitle {
+            font-size: 20px;
+            color: #7a7a7a;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .footer-left .dot {
+            width: 16px;
+            height: 16px;
+            background: #ff5f05;
+            border-radius: 50%;
+        }
+
+        .footer-right {
+            font-size: 18px;
+            color: #b0b0b0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 48px;
+                letter-spacing: 4px;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .name {
+                font-size: 36px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .university {
+                font-size: 18px;
+            }
+
+            .qr-section {
+                padding: 40px 20px;
+            }
+
+            .qr-placeholder {
+                width: 250px;
+                height: 250px;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div >
+         <img src="/Users/arshiyagupta/Desktop/arshiyag11.github.io/Screenshot 2025-10-14 at 8.17.08 PM.png" alt="University of Illinois Logo" style="height: 70% ; width: 70%">
+    </div>
+
+    <div class="container">
+        <h2 class="name">Arshiya Gupta</h2>
+        <div class="title">Computer Science Student</div>
+        <div class="university">University of Illinois at Urbana-Champaign</div>
+        <div class="graduation">Expected Graduation: May 2026</div>
+
+        <div style="display: flex; gap: 60px; align-items: flex-start; margin-bottom: 50px; flex-wrap: wrap;">
+            <div class="contact-info" style="flex: 1; min-width: 300px;">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:arshiyagupta365@gmail.com">arshiyagupta365@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(447) 902-1772</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="linkedin.com/in/arshiya-gupta07" target="_blank">linkedin.com/in/arshiya-gupta07</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="arshiyag11.github.io" target="_blank">arshiyag11.github.io</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; align-self: flex-start; margin-top: -70px;">
+                <div class="qr-box" style="margin-bottom: 10px;">
+                    <div class="qr-placeholder">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://drive.google.com/file/d/1RIppIh3yxGsISa6uLBIEQo1_PKo_2xqh/view?usp=sharing" alt="QR Code" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+                <div class="qr-title" style="font-size: 14px; font-weight: 600;">Scan for Resume</div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <h3 class="section-title">Areas of Interest</h3>
+        <div class="tags">
+            <span class="tag orange">Software Engineering</span>
+            <span class="tag blue">Backend</span>
+            <span class="tag orange">Infrastructure</span>
+            <span class="tag blue">Systems</span>
+        </div>
+
+        <div class="footer">
+            <div class="footer-left">
+                <span class="dot"></span>
+                <span>Open to New Grad Roles</span>
+            </div>
+            <div class="footer-right">
+                Grace Hopper Celebration 2025
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIUC Student Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background: #13294b;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .header img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 240px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .name {
+            color: #13294b;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            color: #ff5f05;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .university {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .graduation {
+            color: #7a7a7a;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            margin-bottom: 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .contact-item i {
+            color: #ff5f05;
+            font-size: 24px;
+            width: 40px;
+            margin-right: 15px;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #ff5f05;
+        }
+
+        .divider {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 40px 0;
+        }
+
+        .section-title {
+            color: #13294b;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .tag {
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .tag.orange {
+            background: #ffe5d9;
+            color: #ff5f05;
+        }
+
+        .tag.blue {
+            background: #d9e8ff;
+            color: #0066cc;
+        }
+
+        .qr-section {
+            background: linear-gradient(135deg, #fff7f0 0%, #ffe8d9 100%);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .qr-box {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #000;
+            margin: 0 auto;
+        }
+
+        .qr-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .qr-subtitle {
+            font-size: 20px;
+            color: #7a7a7a;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .footer-left .dot {
+            width: 16px;
+            height: 16px;
+            background: #ff5f05;
+            border-radius: 50%;
+        }
+
+        .footer-right {
+            font-size: 18px;
+            color: #b0b0b0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 48px;
+                letter-spacing: 4px;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .name {
+                font-size: 36px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .university {
+                font-size: 18px;
+            }
+
+            .qr-section {
+                padding: 40px 20px;
+            }
+
+            .qr-placeholder {
+                width: 250px;
+                height: 250px;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Screenshot 2025-10-14 at 8.17.08 PM.png" alt="University of Illinois Logo">
+    </div>
+
+    <div class="container">
+        <h2 class="name">Arshiya Gupta</h2>
+        <div class="title">Computer Science Student</div>
+        <div class="university">University of Illinois at Urbana-Champaign</div>
+        <div class="graduation">Expected Graduation: May 2026</div>
+
+        <div style="display: flex; gap: 60px; align-items: center; margin-bottom: 50px; flex-wrap: wrap;">
+            <div class="contact-info" style="flex: 1; min-width: 300px;">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:arshiyagupta365@gmail.com">arshiyagupta365@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(447) 902-1772</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="linkedin.com/in/arshiya-gupta07" target="_blank">linkedin.com/in/arshiya-gupta07</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="arshiyag11.github.io" target="_blank">arshiyag11.github.io</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; align-self: flex-start; margin-top: -10px;">
+                <div class="qr-box" style="margin-bottom: 10px;">
+                    <div class="qr-placeholder">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://drive.google.com/file/d/1RIppIh3yxGsISa6uLBIEQo1_PKo_2xqh/view?usp=sharing" alt="QR Code" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+                <div class="qr-title" style="font-size: 14px; font-weight: 600;">Scan for Resume</div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <h3 class="section-title">Areas of Interest</h3>
+        <div class="tags">
+            <span class="tag orange">Software Engineering</span>
+            <span class="tag blue">Backend</span>
+            <span class="tag orange">Infrastructure</span>
+            <span class="tag blue">Systems</span>
+        </div>
+
+        <div class="footer">
+            <div class="footer-left">
+                <span class="dot"></span>
+                <span>Open to New Grad Roles</span>
+            </div>
+            <div class="footer-right">
+                Grace Hopper Celebration 2025
+            </div>
+        </div>
+    </div>
+</body>
+</html>
